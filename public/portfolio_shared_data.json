@@ -82,6 +82,14 @@
           "name": "Tailwindcss",
           "class": "devicon-tailwindcss-plain",
           "level": "65"
+        },
+        {
+          "class": "devicon-selenium-plain",
+          "name": "Selenium"
+        },
+        {
+          "class": "devicon-jest-plain",
+          "name": "Jest"
         }
       ]
     }
