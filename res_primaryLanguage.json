@@ -1,0 +1,184 @@
+{
+    "basic_info": {
+      "description_header": "Hi",
+      "description": "My name is Emmanuel, a Zimbabwean born Software Engineer and Entrepreneur. I love being physically active and building tech solutions to solve real world problems. As an entrepreneur I have built startups, raised capital from angel investors and helped people start their careers. This experience has made me a strong collaborative self-starter who builds features and optimizes products based on user feedback.",
+      "section_name": {
+        "about": "About me",
+        "projects": "Projects",
+        "skills": "Skills",
+        "experience": "Experience"
+      }
+    },
+    "projects": [
+      {
+        "title": "Pair Programming Platform",
+        "startDate": "2022",
+        "description": "A pair programming matching pairs of users who are then redirected to a programming session where they can collaboratively solve a programming challenge using a shared code editor over an audio call. Browse through the images above to see a few of the features I built",
+        "images": [
+          "https://peerprogrammingplatform.vercel.app/static/media/peerprogramming.ccfb5581b967a94f2840.png",
+          "https://i.ibb.co/DbJcJGk/loginprocessdescr.png",
+          "https://i.ibb.co/phC3gyH/loggingin.png",
+          "https://i.ibb.co/c2Kj1HZ/matchingprocessdescr.png",
+          "https://i.ibb.co/R2zWCQx/matching-Process.png",
+          "https://i.ibb.co/pPWqLkh/creating-Twilio.png",
+          "https://i.ibb.co/9Tyt0F6/twiliostart.png",
+          "https://i.ibb.co/7JDwjtT/executingcode.png",
+          "https://i.ibb.co/0sZ24zy/Code-Editor-To-Judge0.png",
+          "https://i.ibb.co/jTSJMcv/syncstates.png",
+          "https://i.ibb.co/JFTFPQd/sync-States.png"
+        ],
+        "one": "https://vimeo.com/755792129/8b065cfac8",
+        "one_description": "Matching Process",
+        "two": "https://vimeo.com/760352882/d01b6ae0e6",
+        "two_description": "Pair Programming Session",
+        "url": "https://peerprogrammingplatform.vercel.app/",
+        "technologies": [
+          {
+            "class": "devicon-django-plain",
+            "name": "Django"
+          },
+          {
+            "class": "devicon-react-original",
+            "name": "React"
+          },
+          {
+            "class": "devicon-redis-plain",
+            "name": "Redis"
+          },
+          {
+            "class": "devicon-tailwindcss-plain",
+            "name": "Tailwind"
+          },
+          {
+            "class": "devicon-docker-plain",
+            "name": "Docker"
+          },
+          {
+            "class": "devicon-selenium-plain",
+            "name": "Selenium"
+          }
+        ]
+      },
+      {
+        "title": "Boxing Web Prediction App",
+        "startDate": "2019-2020",
+        "description": "A web app using machine learning to predict the possible outcome of a boxing match for over 5000 boxers, using data scrapped from multiple sources",
+        "images": [
+          "https://i.ibb.co/cJfgjJ0/boxing.png",
+          "https://i.ibb.co/KmK40RM/webscrapping.png",
+          "https://i.ibb.co/6mm785V/dashboard.png"
+        ],
+        "one": "https://vimeo.com/708625264",
+        "one_description": "Boxing Prediction Web App",
+        "two": "https://boxingvisualisationdashboard.herokuapp.com/",
+        "two_description": "Heroku Dashboard",
+        "technologies": [
+          {
+            "class": "devicon-python-plain",
+            "name": "Python"
+          },
+          {
+            "class": "devicon-flask-original",
+            "name": "Flask"
+          },
+          {
+            "class": "devicon-nodejs-plain",
+            "name": "NodeJS"
+          },
+          {
+            "class": "devicon-r-original",
+            "name": "R"
+          }
+        ]
+      },
+      {
+        "title": "Evaluating the efficacy of marketing campaigns",
+        "startDate": "2019",
+        "description": "Built a data pipeline using Luigi automating the process of extracting and cleaning up data using SQL and building a Monte Carlo Markov Chain to evaluate the conversion rates of marketing campaigns by day, time and channel",
+        "images": [
+          "https://miro.medium.com/max/592/0*UW0RIBD18momcQp2"
+        ],
+        "one": "https://hackernoon.com/building-a-monte-carlo-markov-chain-pipeline-using-luigi-jocf3223",
+        "one_description": "Blog Post explaining process",
+        "technologies": [
+          {
+            "class": "devicon-angularjs-plain",
+            "name": "Angular"
+          },
+          {
+            "class": "devicon-typescript-plain",
+            "name": "TypeScript"
+          },
+          {
+            "class": "devicon-csharp-plain",
+            "name": "C#"
+          }
+        ]
+      }
+    ],
+    "experience": [
+      {
+        "company": "CodeHeroes",
+        "title": "Full Stack Developer (Volunteer)",
+        "description": "Pair programmed on React website for a Non Profit and optimized mobile responsiveness features with CSS. Built out user authentication functionality, and conditionally rendered sidebar components using Node.js and Okta",
+        "years": "2022",
+        "mainTech": [
+          "React and NodeJS"
+        ],
+        "technologies": [
+          "React",
+          "Nodejs",
+          "Docker",
+          "Bootstrap"
+        ]
+      },
+      {
+        "company": "The Gradient Boost",
+        "title": "Founder",
+        "years": "2020 - 2022",
+        "description": "Built a startup and developed a curriculum training Data Science talent in Africa through live mentorship with experienced Data Scientists at no cost, recovering income through recruitment fees; Raised funding from two angel investors in Africa. Trained over 120 students with 50% securing internships and full time jobs",
+        "mainTech": [
+          "Django, Sales, Strategy"
+        ],
+        "technologies": [
+          "Django"
+        ]
+      },
+      {
+        "company": "Yoco",
+        "title": "Business Intelligent Analyst",
+        "years": "2019-2020",
+        "description": "Built dashboards and used SQL to help evaluate the efficiency of marketing campaigns and aiding in fraud detection for over $55 million in monthly transactions",
+        "mainTech": [
+          "SQL"
+        ],
+        "technologies": [
+          "SQL, Tableau, Python, Snowflake"
+        ]
+      },
+      {
+        "company": "Digitas Liquorice",
+        "title": "Data Analyst",
+        "years": "2018-2019",
+        "description": "Built dashboards collating data to help one of the big 5 Banks in South Africa  get insights to drive marketing efforts",
+        "mainTech": [
+          "SQL, Excel"
+        ],
+        "technologies": [
+          "SQL, Excel"
+        ]
+      },
+      {
+        "company": "Google",
+        "title": "Intern Analyst, LCS Team",
+        "years": "2018",
+        "description": "Carried out data analysis on emerging tech ecosystems in Africa supporting Google branches in Africa in restructuring their strategic goal to increase revenue from Video ads",
+        "mainTech": [
+          "SQL, Excel"
+        ],
+        "technologies": [
+          "SQL, Excel"
+        ]
+      }
+    ]
+  }
