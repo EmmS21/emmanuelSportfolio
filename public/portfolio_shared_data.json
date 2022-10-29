@@ -1,0 +1,88 @@
+{
+    "basic_info": {
+      "name": "Emmanuel Sibanda",
+      "titles": [ "Backend Developer", "Full Stack Engineer", "Data Engineer", "Front-End Developer" ],
+      "social": [
+        {
+          "name": "github",
+          "url": "https://github.com/EmmS21",
+          "class": "fab fa-github"
+        }
+      ],
+      "image": "https://avatars.githubusercontent.com/u/44911198?v=4"
+    },
+    "skills": {
+      "icons": [
+        {
+          "name": "HTML 5",
+          "class": "devicon-html5-plain",
+          "level": "95"
+        },
+        {
+          "name": "CSS 3",
+          "class": "devicon-css3-plain",
+          "level": "95"
+        },
+        {
+          "name": "Django",
+          "class": "devicon-django-plain",
+          "level": "80"
+        },
+        {
+          "name": "Docker",
+          "class": "devicon-docker-plain",
+          "level": "90"
+        },
+        {
+          "name": "Flask",
+          "class": "devicon-flask-original",
+          "level": "90"
+        },
+        {
+          "name": "Git",
+          "class": "devicon-git-plain",
+          "level": "90"
+        },
+        {
+          "name": "Jira",
+          "class": "devicon-jira-plain",
+          "level": "90"
+        },
+        {
+          "name": "MySQL",
+          "class": "devicon-mysql-plain",
+          "level": "90"
+        },
+        {
+          "name": "JavaScript",
+          "class": "devicon-javascript-plain",
+          "level": "70"
+        },
+        {
+          "name": "Python",
+          "class": "devicon-python-plain",
+          "level": "75"
+        },
+        {
+          "name": "React",
+          "class": "devicon-react-original",
+          "level": "85"
+        },
+        {
+          "name": "Redis",
+          "class": "devicon-redis-plain",
+          "level": "85"
+        },
+        {
+          "name": "Redux",
+          "class": "devicon-redux-original",
+          "level": "65"
+        },
+        {
+          "name": "Tailwindcss",
+          "class": "devicon-tailwindcss-plain",
+          "level": "65"
+        }
+      ]
+    }
+  }
