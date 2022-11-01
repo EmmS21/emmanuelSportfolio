@@ -31,6 +31,14 @@
         "one_description": "Matching Process",
         "two": "https://vimeo.com/760352882/d01b6ae0e6",
         "two_description": "Pair Programming Session",
+        "three": "https://vimeo.com/manage/videos/765907146/55cc923ef8",
+        "three_description": "Synchronizing States to make paired users share code editor",
+        "four": "https://medium.com/codingsquad/a-pair-programming-platform-to-help-you-get-better-at-technical-interviews-building-out-the-14c03762ebf4",
+        "four_description": "Blog: Building code editor and initiating Twilio Conference Call",
+        "five": "https://medium.com/codingsquad/pair-programming-platform-redirecting-matched-pairs-of-users-7517add184d3",
+        "five_description": "Matching and redirecting users to pair programming session",
+        "six": "https://medium.com/codingsquad/synchronizing-states-between-two-clients-enabling-users-to-share-code-editor-94a0f9875bbd",
+        "six_description": "Synchronizing States between two clients enabling users to share code editor",
         "url": "https://peerprogrammingplatform.vercel.app/",
         "technologies": [
           {

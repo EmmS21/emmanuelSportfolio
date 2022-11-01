@@ -15,6 +15,14 @@ class ProjectDetailsModal extends Component {
       var oneDescr = this.props.data.one_description;
       var two = this.props.data.two;
       var twoDescr = this.props.data.two_description;
+      var three = this.props.data.three;
+      var threeDescr = this.props.data.three_description;
+      var four = this.props.data.four;
+      var fourDescr = this.props.data.four_description;
+      var five = this.props.data.five;
+      var fiveDescr = this.props.data.five_description;
+      var six = this.props.data.six;
+      var sixDescr = this.props.data.six_description;
       var url = this.props.data.url;
       if (this.props.data.technologies) {
         var tech = technologies.map((icons, i) => {
@@ -102,6 +110,10 @@ class ProjectDetailsModal extends Component {
             <ul>
               <li><a href={one}> {oneDescr} </a></li>
               <li><a href={two}> {twoDescr} </a></li>
+              <li><a href={three}> {threeDescr} </a></li>
+              <li><a href={four}> {fourDescr} </a></li>
+              <li><a href={five}> {fiveDescr} </a></li>
+              <li><a href={six}> {sixDescr} </a></li>
             </ul>
             <div className="col-md-12 text-center">
               <ul className="list-inline mx-auto">{tech}</ul>
