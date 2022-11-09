@@ -74,7 +74,7 @@
       {
         "title": "Boxing Web Prediction App",
         "startDate": "2019-2020",
-        "description": "A web app using machine learning to predict the possible outcome of a boxing match for over 5000 boxers, using data scrapped from multiple sources",
+        "description": "A web app using machine learning to predict the possible outcome of a boxing match for over 5000 boxers, using data scraped from multiple sources",
         "images": [
           "https://i.ibb.co/cJfgjJ0/boxing.png",
           "https://i.ibb.co/KmK40RM/webscrapping.png",
@@ -84,6 +84,10 @@
         "one_description": "Boxing Prediction Web App",
         "two": "https://boxingvisualisationdashboard.herokuapp.com/",
         "two_description": "Heroku Dashboard",
+        "three": "https://hackernoon.com/i-built-a-boxing-prediction-web-app-on-shiny-here-is-how-jz8932xt",
+        "three_description": "Blog Post: How I built a boxing prediction web app using Shiny",
+        "four": "https://hackernoon.com/d-nr1o32po",
+        "four_description": "How I built an Interactive Dashboard to visualize boxing data",
         "technologies": [
           {
             "class": "devicon-python-plain",
@@ -111,7 +115,7 @@
           "https://miro.medium.com/max/592/0*UW0RIBD18momcQp2"
         ],
         "one": "https://hackernoon.com/building-a-monte-carlo-markov-chain-pipeline-using-luigi-jocf3223",
-        "one_description": "Blog Post explaining process",
+        "one_description": "Blog Post explaining the process of this build",
         "technologies": [
           {
             "class": "devicon-angularjs-plain",
