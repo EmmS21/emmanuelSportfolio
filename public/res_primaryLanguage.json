@@ -25,7 +25,9 @@
           "https://i.ibb.co/7JDwjtT/executingcode.png",
           "https://i.ibb.co/0sZ24zy/Code-Editor-To-Judge0.png",
           "https://i.ibb.co/jTSJMcv/syncstates.png",
-          "https://i.ibb.co/JFTFPQd/sync-States.png"
+          "https://i.ibb.co/JFTFPQd/sync-States.png",
+          "https://ibb.co/88L05p2",
+          "https://ibb.co/mcM1M7n"
         ],
         "one": "https://vimeo.com/755792129/8b065cfac8",
         "one_description": "Matching Process",
@@ -39,6 +41,8 @@
         "five_description": "Matching and redirecting users to pair programming session",
         "six": "https://medium.com/codingsquad/synchronizing-states-between-two-clients-enabling-users-to-share-code-editor-94a0f9875bbd",
         "six_description": "Synchronizing States between two clients enabling users to share code editor",
+        "seven": "https://vimeo.com/770609143",
+        "seven_description": "Retrieving programming challenge and synchronizing states, ensuring paired users see the same challenge",
         "url": "https://peerprogrammingplatform.vercel.app/",
         "technologies": [
           {

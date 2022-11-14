@@ -23,6 +23,8 @@ class ProjectDetailsModal extends Component {
       var fiveDescr = this.props.data.five_description;
       var six = this.props.data.six;
       var sixDescr = this.props.data.six_description;
+      var seven = this.props.data.seven;
+      var sevenDescr = this.props.data.seven_description;
       var url = this.props.data.url;
       if (this.props.data.technologies) {
         var tech = technologies.map((icons, i) => {
@@ -114,6 +116,7 @@ class ProjectDetailsModal extends Component {
               <li><a href={four}> {fourDescr} </a></li>
               <li><a href={five}> {fiveDescr} </a></li>
               <li><a href={six}> {sixDescr} </a></li>
+              <li><a href={seven}> {sevenDescr} </a></li>
             </ul>
             <div className="col-md-12 text-center">
               <ul className="list-inline mx-auto">{tech}</ul>
