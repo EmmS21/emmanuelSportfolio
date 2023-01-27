@@ -122,16 +122,27 @@
         "one_description": "Blog Post explaining the process of this build",
         "technologies": [
           {
-            "class": "devicon-angularjs-plain",
-            "name": "Angular"
+            "class": "devicon-python-plain",
+            "name": "Python"
+          }
+        ]
+      },
+      {
+        "title": "Code Race",
+        "startDate": "2022",
+        "description": "An MVP for a gamified code editor helping users improve their coding skills by solving as many easy leetcode questions as they can within 25 minutes",
+        "images": [
+          "https://ibb.co/sWP3rpz"
+        ],
+        "url": "https://code-race.vercel.app/",
+        "technologies": [
+          {
+            "class": "devicon-nodejs-plain",
+            "name": "NodeJS"
           },
           {
-            "class": "devicon-typescript-plain",
-            "name": "TypeScript"
-          },
-          {
-            "class": "devicon-csharp-plain",
-            "name": "C#"
+            "class": "devicon-react-original",
+            "name": "React"
           }
         ]
       }
