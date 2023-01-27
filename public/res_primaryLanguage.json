@@ -132,7 +132,7 @@
         "startDate": "2022",
         "description": "An MVP for a gamified code editor helping users improve their coding skills by solving as many easy leetcode questions as they can within 25 minutes",
         "images": [
-          "https://postimg.cc/56DT0zzg"
+          "https://i.postimg.cc/8zCSZBP2/codegame.png"
         ],
         "url": "https://code-race.vercel.app/",
         "technologies": [
