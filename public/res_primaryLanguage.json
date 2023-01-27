@@ -130,7 +130,7 @@
       {
         "title": "Code Race",
         "startDate": "2022",
-        "description": "An MVP for a gamified code editor helping users improve their coding skills by solving as many easy leetcode questions as they can within 25 minutes",
+        "description": "An MVP for a gamified code editor helping users improve their coding skills by solving as many easy leetcode questions as they can within 25 minutes. For this project, I built a functional code editor, scraped and cleaned data from Leetcode, stored the data in a MongoDB database and built a custom auto-grader that checks whether the output produced by your code returns the correct answers.",
         "images": [
           "https://i.postimg.cc/8zCSZBP2/codegame.png"
         ],
