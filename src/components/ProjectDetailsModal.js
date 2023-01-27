@@ -109,7 +109,7 @@ class ProjectDetailsModal extends Component {
             </h3>
             <p className="modal-description">{description}</p>
             {
-              twoDescr ? (
+              twoDescr.length < 5 ? (
                 <div>
                 <p> Some Video Links: </p>
                 <ul>
