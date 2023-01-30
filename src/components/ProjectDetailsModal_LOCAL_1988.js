@@ -108,7 +108,6 @@ class ProjectDetailsModal extends Component {
               ) : null}
             </h3>
             <p className="modal-description">{description}</p>
-<<<<<<< HEAD
             <p> Some Video Links: </p>
             <ul>
               <li><a href={one}> {oneDescr} </a></li>
@@ -119,24 +118,6 @@ class ProjectDetailsModal extends Component {
               <li><a href={six}> {sixDescr} </a></li>
               <li><a href={seven}> {sevenDescr} </a></li>
             </ul>
-=======
-            {
-              twoDescr.length < 5 ? (
-                <div>
-                <p> Some Video Links: </p>
-                <ul>
-                  <li><a href={one}> {oneDescr} </a></li>
-                  <li><a href={two}> {twoDescr} </a></li>
-                  <li><a href={three}> {threeDescr} </a></li>
-                  <li><a href={four}> {fourDescr} </a></li>
-                  <li><a href={five}> {fiveDescr} </a></li>
-                  <li><a href={six}> {sixDescr} </a></li>
-                  <li><a href={seven}> {sevenDescr} </a></li>
-                </ul>
-                </div>
-              ) : null
-            }
->>>>>>> fdec686e3c115b5f7e3fb3a2e545402c65c20c1e
             <div className="col-md-12 text-center">
               <ul className="list-inline mx-auto">{tech}</ul>
             </div>
