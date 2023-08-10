@@ -15,16 +15,6 @@
     "skills": {
       "icons": [
         {
-          "name": "HTML 5",
-          "class": "devicon-html5-plain",
-          "level": "95"
-        },
-        {
-          "name": "CSS 3",
-          "class": "devicon-css3-plain",
-          "level": "95"
-        },
-        {
           "name": "Django",
           "class": "devicon-django-plain",
           "level": "80"
@@ -60,6 +50,11 @@
           "level": "70"
         },
         {
+          "name": "TypeScript",
+          "class": "devicon-typescript-plain",
+          "level": "70"
+        },
+        {
           "name": "Python",
           "class": "devicon-python-plain",
           "level": "75"
@@ -73,11 +68,6 @@
           "name": "Redis",
           "class": "devicon-redis-plain",
           "level": "85"
-        },
-        {
-          "name": "Redux",
-          "class": "devicon-redux-original",
-          "level": "65"
         },
         {
           "name": "Tailwindcss",

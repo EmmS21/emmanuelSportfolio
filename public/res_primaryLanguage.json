@@ -149,18 +149,19 @@
     ],
     "experience": [
       {
-        "company": "CodeHeroes",
-        "title": "Full Stack Developer (Volunteer)",
-        "description": "Pair programmed on React website for a Non Profit and optimized mobile responsiveness features with CSS. Built out user authentication functionality, and conditionally rendered sidebar components using Node.js and Okta",
-        "years": "2022",
+        "company": "Vial",
+        "title": "Software Engineer Intern",
+        "description": "Developed an app automating form creation for clinical trial onboarding, reducing the time to create a clinical trial form from 30 minutes to 10 minutes with the initial version and refactored code to migrate all our form tables from ag-grid to react-data-grid, reducing our costs",
+        "years": "2023",
         "mainTech": [
-          "React and NodeJS"
+          "React/NextJS, TypeScript, Jest and NodeJS"
         ],
         "technologies": [
           "React",
-          "Nodejs",
-          "Docker",
-          "Bootstrap"
+          "NextJS",
+          "TypeScript",
+          "Jest",
+          "NodeJS"
         ]
       },
       {
