@@ -168,6 +168,26 @@
             "name": "React"
           }
         ]
+      },
+      {
+        "title": "PEMDAS Calculator",
+        "startDate": "2023",
+        "description": "A simple PEMDAS calculator.",
+        "images": [
+          "https://i.postimg.cc/BbNkwVmm/Screen-Shot-2023-08-21-at-10-43-21-AM.png"
+        ],
+        "url": "https://pemdas-emms21.vercel.app/",
+
+        "technologies": [
+          {
+            "class": "devicon-react-original",
+            "name": "ReactJS"
+          },
+          {
+            "class": "devicon-jest-plain",
+            "name": "Jest"
+          }
+        ]
       }
     ],
     "experience": [
