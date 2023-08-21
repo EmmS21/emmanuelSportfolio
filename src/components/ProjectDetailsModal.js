@@ -5,6 +5,10 @@ import AwesomeSliderStyles from "../scss/light-slider.scss";
 import AwesomeSliderStyles2 from "../scss/dark-slider.scss";
 import "react-awesome-slider/dist/custom-animations/scale-out-animation.css";
 class ProjectDetailsModal extends Component {
+  hasVideoLinks() {
+    const { one, two, three, four, five, six, seven } = this.props.data;
+    return one || two || three || four || five || six || seven;
+  }
   render() {
     if (this.props.data) {
       const technologies = this.props.data.technologies;
@@ -108,16 +112,21 @@ class ProjectDetailsModal extends Component {
               ) : null}
             </h3>
             <p className="modal-description">{description}</p>
+            {this.hasVideoLinks() && (
+              <>
             <p> Some Video Links: </p>
             <ul>
-              <li><a href={one}> {oneDescr} </a></li>
-              <li><a href={two}> {twoDescr} </a></li>
-              <li><a href={three}> {threeDescr} </a></li>
-              <li><a href={four}> {fourDescr} </a></li>
-              <li><a href={five}> {fiveDescr} </a></li>
-              <li><a href={six}> {sixDescr} </a></li>
-              <li><a href={seven}> {sevenDescr} </a></li>
+              { one &&  <li><a href={one}> {oneDescr} </a></li> }
+              { two && <li><a href={two}> {twoDescr} </a></li> }
+              { three && <li><a href={three}> {threeDescr} </a></li> }
+              { four &&  <li><a href={four}> {fourDescr} </a></li> }
+              { five &&  <li><a href={five}> {fiveDescr} </a></li> }
+              { six && <li><a href={six}> {sixDescr} </a></li> }
+              { seven && <li><a href={seven}> {sevenDescr} </a></li> }
             </ul>
+              
+              </>
+            )}
             <div className="col-md-12 text-center">
               <ul className="list-inline mx-auto">{tech}</ul>
             </div>

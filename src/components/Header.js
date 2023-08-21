@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import Typical from "react-typical";
-import Switch from "react-switch";
 
 class Header extends Component {
   titles = [];
@@ -33,10 +32,10 @@ class Header extends Component {
 
     const HeaderTitleTypeAnimation = React.memo( () => {
       return <Typical className="title-styles" steps={this.titles} loop={50} />
-    }, (props, prevProp) => true);
+    });
 
     return (
-      <header id="home" style={{ height: window.innerHeight - 140, display: 'block' }}>
+    <header id="home" style={{ height: (window.innerHeight - 140) * 0.5, display: 'block' }}>
         <div className="row aligner" style={{height: '100%'}}>
           <div className="col-md-12">
             <div>

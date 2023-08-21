@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import { Icon } from "@iconify/react";
+import "../scss/about.scss"
+
 
 class About extends Component {
   render() {
