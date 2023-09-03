@@ -73,6 +73,22 @@
           {
             "class": "devicon-jest-plain",
             "name": "Jest"
+          },
+          {
+            "class": "devicon-python-plain",
+            "name": "Python"
+          },
+          {
+            "class": "devicon-javascript-plain",
+            "name": "Javascript"
+          },
+          {
+            "class": "devicon-css-plain",
+            "name": "CSS"
+          },
+          {
+            "class": "devicon-nosql-plain",
+            "name": "NoSQL"
           }
         ]
       },
@@ -144,6 +160,18 @@
           {
             "class": "devicon-react-original",
             "name": "React"
+          },
+          {
+            "class": "devicon-python-plain",
+            "name": "Python"
+          },
+          {
+            "class": "devicon-javascript-plain",
+            "name": "Javascript"
+          },
+          {
+            "class": "devicon-css-plain",
+            "name": "CSS"
           }
         ]
       },
@@ -166,7 +194,28 @@
           {
             "class": "devicon-react-original",
             "name": "React"
+          },
+          {
+            "class": "devicon-typescript-plain",
+            "name": "Typescript"
+          },
+          {
+            "class": "devicon-selenium-plain",
+            "name": "Selenium"
+          },
+          {
+            "class": "devicon-css-plain",
+            "name": "CSS"
+          },
+          {
+            "class": "devicon-aws-plain",
+            "name": "AWS Lambda"
+          },
+          {
+            "class": "devicon-redis-plain",
+            "name": "Redis"
           }
+
         ]
       },
       {
@@ -186,6 +235,10 @@
           {
             "class": "devicon-jest-plain",
             "name": "Jest"
+          },
+          {
+            "class": "devicon-javascript-plain",
+            "name": "Javascipt"
           }
         ]
       }

@@ -1,7 +1,42 @@
 import React, { Component } from "react";
-
+import { Modal } from 'antd';
 
 class About extends Component {
+  countDown = () => {
+    let secondsToGo = 10; 
+    const instance = Modal.success({
+      title: 'End to End Testing',
+      content: `This will open up a new browser controlled by Selenium and carry out end to end testing for the Project; Job Assistant. Please do not interact with that page during this time. You will see a summary of the test results upon completion.`,
+    });
+    const timer = setInterval(() => {
+      secondsToGo -= 1;
+      instance.update({
+        content: `This will open up a new browser controlled by Selenium and carry out end to end testing for the Project; Job Assistant. Please do not interact with that page during this time. You will see a summary of the test results upon completion.`,
+      });
+    }, 1000);
+    setTimeout(() => {
+      clearInterval(timer);
+    }, secondsToGo * 1000);
+  };
+
+  runSeleniumScript = async () => {
+    this.countDown();
+    try {
+      const response = await fetch('http://localhost:5001/api/runSelenium');
+      const data = await response.text();
+      if (response.ok) {
+        console.log('Selenium script executed successfully:', data);
+        alert(data);
+      } else {
+        console.error('Error executing Selenium script:', data);
+        alert('Failed to execute the Selenium script.');
+      }
+    } catch (error) {
+      console.error("Error fetching the endpoint:", error.message);
+      alert('Failed to execute the Selenium script due to a network error.');
+    }
+  };
+
   render() {
     if (this.props.sharedBasicInfo) {
       var profilepic = this.props.sharedBasicInfo.image;
@@ -22,6 +57,7 @@ class About extends Component {
           <div className="row center mx-auto mb-5">
             <div className="col-md-4 mb-5 center">
               <div className="polaroid">
+                <div className="picture-button-container">
                 <span style={{ cursor: "auto" }}>
                   <img
                     height="250px"
@@ -29,6 +65,15 @@ class About extends Component {
                     alt="Avatar placeholder"
                   />
                 </span>
+                <button
+              className="e2e-test-btn"
+              onClick={this.runSeleniumScript}
+              title="This will run an end-to-end test simulating a user's journey"
+            >
+              Visual End to End Testing
+            </button>
+            </div>
+
               </div>
             </div>
 

@@ -1,14 +1,16 @@
+import "react-awesome-slider/dist/custom-animations/scale-out-animation.css";
 import React, { Component } from "react";
 import { Modal } from "react-bootstrap";
 import AwesomeSlider from "react-awesome-slider";
 import AwesomeSliderStyles from "../scss/light-slider.scss";
 import AwesomeSliderStyles2 from "../scss/dark-slider.scss";
-import "react-awesome-slider/dist/custom-animations/scale-out-animation.css";
 class ProjectDetailsModal extends Component {
   hasVideoLinks() {
     const { one, two, three, four, five, six, seven } = this.props.data;
     return one || two || three || four || five || six || seven;
   }
+
+
   render() {
     if (this.props.data) {
       const technologies = this.props.data.technologies;
