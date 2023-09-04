@@ -1,7 +1,16 @@
 import React, { Component } from "react";
-import { Modal } from 'antd';
+import { Modal, Select } from 'antd';
 
+const { Option } = Select;
 class About extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      selectedProjects: [], 
+      isModalVisible: false, 
+    };
+    this.closeModal = this.closeModal.bind(this); 
+  }
   countDown = () => {
     let secondsToGo = 10; 
     const instance = Modal.success({
@@ -36,6 +45,43 @@ class About extends Component {
       alert('Failed to execute the Selenium script due to a network error.');
     }
   };
+  handleDropdownChange = selectedKeys => {
+    const selectedProjects = [];
+    
+    for (const [projectName, projectObj] of Object.entries(this.props.projectData)) {
+      for (const key of selectedKeys) {
+        if (projectObj.hasOwnProperty(key)) {
+          selectedProjects.push({
+            key: key,
+            value: projectObj[key],
+            projectName: projectName
+          });
+        }
+      }
+    }
+  
+    // Check if selectedProjects is not empty before showing modal
+    if (selectedProjects.length > 0) {
+      this.setState({ selectedProjects, isModalVisible: true });
+    } else {
+      this.setState({ selectedProjects, isModalVisible: false });
+    }
+  }
+  
+
+
+  closeModal = () => {
+    this.setState({ isModalVisible: false });
+  }
+  getUniqueProjectKeys = () => {
+    const allKeys = [];
+    for (const [projectName, projectObj] of Object.entries(this.props.projectData)) {
+        allKeys.push(...Object.keys(projectObj));
+    }
+    // Get unique keys
+    return [...new Set(allKeys)];
+}
+
 
   render() {
     if (this.props.sharedBasicInfo) {
@@ -73,6 +119,7 @@ class About extends Component {
               Visual End to End Testing
             </button>
             </div>
+
 
               </div>
             </div>
@@ -121,6 +168,35 @@ class About extends Component {
             </div>
           </div>
         </div>
+        <div className="select-container">
+          <label className="flashing-label">Select Job Responsibilities and get a summary of proficiencies shown in existing projects</label>
+          <Select
+              mode="multiple"
+              showSearch={false}
+              placeholder="Select Job Responsibilities"
+              onChange={this.handleDropdownChange}
+              style={{ width: '100%' }}
+            >
+              {this.getUniqueProjectKeys().map(key => (
+                <Option key={key} value={key}>{key}</Option>
+              ))}
+            </Select>
+        </div>
+        <Modal
+            title="Proficiency based on project"
+            visible={this.state.isModalVisible}
+            onCancel={this.closeModal}
+            footer={null}
+        >
+            {this.state.selectedProjects.map(project => (
+                <div key={project.key}>
+                    <strong>{project.key}:</strong> {project.value} 
+                    <br/>
+                    <small>Project: {project.projectName}</small>
+                    <br/><br/>
+                </div>
+            ))}
+        </Modal>
       </section>
     );
   }

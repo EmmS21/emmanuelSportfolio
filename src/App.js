@@ -16,6 +16,7 @@ class App extends Component {
       foo: "bar",
       resumeData: {},
       sharedData: {},
+      projectData: {},
     };
   }
 
@@ -44,6 +45,7 @@ class App extends Component {
 
   componentDidMount() {
     this.loadSharedData();
+    this.loadProjectDescriptions()
     this.applyPickedLanguage(
       window.$primaryLanguage,
       window.$secondaryLanguageIconId
@@ -79,6 +81,20 @@ class App extends Component {
     });
   }
 
+  loadProjectDescriptions() {
+    $.ajax({
+      url: `project_description.json`,
+      dataType: "json",
+      cache: false,
+      success: function(data) {
+        this.setState({ projectData: data });
+      }.bind(this),
+      error: function(xhr, status, err) {
+        alert(err);
+      },
+    });
+  }
+
   render() {
     return (
       <div>
@@ -108,6 +124,7 @@ class App extends Component {
         <About
           resumeBasicInfo={this.state.resumeData.basic_info}
           sharedBasicInfo={this.state.sharedData.basic_info}
+          projectData={this.state.projectData}
         />
         <Projects
           resumeProjects={this.state.resumeData.projects}

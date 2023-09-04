@@ -1,0 +1,59 @@
+{
+    "Job Assistant": {
+        "Develop and maintain web applications using modern frameworks": "Developed a structured application using Next.js, with a clear UI built from imported components.",
+        "Integrate Third-Party Libraries and APIs": "Successfully integrated the OpenAI API, dynamically constructing prompts and handling API responses.",
+        "Manage and optimize caching (eg. Redis) solutions for rapid data access and scalability": "Utilized Redis for rate limiting, ensuring quick and efficient data access.",
+        "Design and implement interactive UI components to enhance user engagement": "Developed various interactive UI components, including games and visual feedback mechanisms.",
+        "Implement robust error handling mechanisms to provide clear feedback to users": "Developed custom error classes, providing specific feedback for various error scenarios.",
+        "Design and implement responsive and visually appealing styles for web applications": "Utilized CSS for comprehensive styling, including animations, transitions, and mobile responsiveness.",
+        "Develop and maintain automated test scripts to ensure application robustness and consistency": "Used Selenium WebDriver for comprehensive web application testing, simulating real-world user interactions and validating test outcomes.",
+        "AWS Lambda Functions": "Leveraged AWS Lambda to run serverless function (OpenAI request) in order to bypass Vercel timelimit on serverless functions"
+    },
+    "Pair Progamming": {
+        "Develop and maintain web applications using modern frameworks": "Dockerized Application Management: Orchestrated multiple services using Docker-compose, including Redis and backend/frontend applications.",
+        "Integrate Third-Party Libraries and APIs": "MongoDB & API Integrations: Connected to MongoDB endpoints for challenge data retrieval. Integrated Twilio for real-time voice chat and secure payment processing.Integrated OpenAI's API to provide coding challenge solutions. Integrated Judge0 to execute run from code editor",
+        "Manage and optimize caching (eg. Redis) solutions for rapid data access and scalability": "Utilized Redis to store list of users in pair programming queue for matching algorithm.",
+        "Design and implement state management solutions (ie. useContext, Redux)": "State Management: Utilized ContextAPI for global state management and user authentication. Leveraged Redux for efficient state management, dispatching actions, and handling reducers.",
+        "Implementing real-time communication solutions (ie. Websockets, Server Sent Events)": "Real-time Communication with WebSockets: Established real-time functionalities using Django Channels and WebSockets, with debouncing and throttling techniques to optimize data transmission.",
+        "Implement authentication and authorization mechanisms, including token management and user session handling": "Secure Environment Handling: Managed sensitive keys and environment variables securely.",
+        "Implement client side validation and error handling": "Implemented client side and server side error handling for interactions with multiple third party APIs to provide a more seamless user experience",
+        "Automated Testing and Unit Testing": "Automated Testing with Selenium: Automated user login processes concurrently using Selenium, validating UI interactions. Implemented unit testing with a test coverage of 70%",
+        "Containerizing application using Docker": "Optimized Docker Deployment: Crafted Dockerfiles to containerize backend and frontend.",
+        "Implementing RESTful APIs": "Implemented RESTful APIs connecting the backend to the frontend and interacting with other third party APIs"
+    },
+    "Code Race": {
+        "Develop and maintain web applications using modern frameworks": "Developed a web-based code editor application using React, integrating features like code submission, real-time feedback, and user interactivity.",
+        "Integrate Third-Party Libraries and APIs": "Integrated the AceEditor for code editing, Judge0 API for code execution, Axios for HTTP requests, and MUI for UI components.",
+        "Design and implement state management solutions (ie. useContext, Redux)": "Utilized React's Context API to manage global state across components, ensuring data consistency and reactivity.",
+        "Design and Implement Interactive UI Components": "Developed interactive components like modals, countdown timers, navigation bars, and drawers to enhance user experience.",
+        "Implement client side validation and error handling": "Implemented error handling during code execution and provided real-time feedback to users based on code output.",
+        "Automated Testing and Unit Testing": "Used \"@testing-library/react\" and Jest to write unit tests, ensuring functionality and user interactions are correctly handled.",
+        "Optimize Application Performance and User Experience": "Implemented loading spinners using RingLoader to provide feedback during asynchronous operations.",
+        "Develop and Maintain Backend Services": "Developed server-side logic using Express.js, handling API routes to retrieve coding challenges and other data.",
+        "Integrate and Manage Databases": "Interacted with MongoDB through API endpoints to fetch coding challenges and other relevant data.",
+        "Ensure Secure API Interactions": "Managed API keys securely and integrated CORS middleware to handle cross-origin requests.",
+        "Implement Real-time Functionalities": "Utilized countdown timers to provide real-time feedback on time left for coding challenges.",
+        "Design and Implement Responsive UI Components": "Developed responsive modals and editor components that adapt to different screen sizes and user interactions."
+    },
+    "Boxing Prediction": {
+        "Data Cleaning and Transformation": "Utilized pandas for data cleaning, transformation, and integration from multiple CSV sources. (Practical Proficiency: Concatenating CSV files, handling missing values, data type conversions, merging datasets)",
+        "Data Visualization and Reporting": "Employed Plotly to create interactive visualizations like scatter plots, heatmaps, and tables for insightful reporting. (Practical Proficiency: Creating interactive visualizations using Plotly, transforming data for insights)",
+        "Backend Data Management": "Managed server-side data logic using Dash and Python, ensuring data consistency and availability. (Practical Proficiency: Implementing server-side data logic using Dash and Python)",
+        "Optimize Data Retrieval and Processing": "Optimized data processing tasks and implemented efficient filtering mechanisms for user queries. (Practical Proficiency: Optimizing data processing tasks, implementing efficient data filtering)",
+        "Data Manipulation": "Proficient in data manipulation tasks such as string manipulation, data type conversions, and handling missing values. (Practical Proficiency: Handling string manipulation, data type conversions, and missing values)",
+        "Design and Implement Data Pipelines": "Developed a boxing dashboard using Dash, showcasing various visualizations and data tables. (Practical Proficiency: Designing and implementing data pipelines, creating a Dash-based dashboard)",
+        "Machine Learning": "Proficiency in implementing, optimizing through hyperparameter tuning, feature importance and generating new features by combining existing features and testing accuracy or multiple Machine Learning models including CatBoost and XGBoost, using a Confusion Matrix"
+      },
+      "PEMDAS Calculator": {
+        "Implementing reusable UI components Development and Integration":  "Demonstrated proficiency by implementing and integrating UI components including Buttons and Frames, enhancing the overall user experience.",
+        "User Interface Design and Styling": "Implementing a visually appealing and consistent look and feel throughout the application using CSS",
+        "Automated Testing and Unit Testing": "Implementing unit testing ensuring test coverage of 85%",
+        "Dynamic Content Display and Interaction":  "Implementing dynamic text content with automatic font sizing to enhance user experience"
+      },
+      "Evaluating Efficacy of Marketing Campaigns":{
+        "Data Pipeline Development": "Demonstrated expertise in designing and implementing data pipelines using Luigi for efficient ETL processes.",
+        "Data Modeling": "Skillful creation and management of data models, schemas, and structures to ensure efficient data storage and analysis.",
+        "Database Management": "Evaluated project requirements and selected suitable database technology  based on data structure, scalability, and performance considerations. Leveraged SQL to acquire and clean data from multiple tables",
+        "Machine Learning": "Leveraged Markov Chain to return analysis of marketing campaign likely efficacy based on parameters such as; what day and ad is released and through what marketing channels"
+      }          
+}
