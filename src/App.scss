@@ -545,6 +545,38 @@ footer a:focus {
     animation: rotatingBulletGradient 5s infinite, rotation 5s infinite;
 }
 
+.transparent-button {
+    background-color: transparent;
+    border: 1px solid #ddd; 
+    margin: 0 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.1);  
+    }
+}
+
+.contact-modal-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px; 
+}
+
+.contact-modal-field {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+}
+
+.contact-modal-field label,
+.contact-modal-field input,
+.contact-modal-field textarea {
+    width: 100%;
+}
 
   
   .slider:before {
@@ -614,6 +646,21 @@ footer a:focus {
 	}
   }
   
+  .transparent-button-center {
+    background-color: transparent;
+	border: 1px solid black; 
+    color: inherit;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.transparent-button-center:hover {
+    background-color: grey; 
+    color: inherit; 
+}
 
   
   

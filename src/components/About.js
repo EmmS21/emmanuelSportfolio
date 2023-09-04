@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Modal, Select, Switch } from 'antd';
+import { Modal, Select, Switch, Button, Tooltip } from 'antd';
 
 const { Option } = Select;
 class About extends Component {
@@ -9,7 +9,12 @@ class About extends Component {
       selectedProjects: [], 
       isModalVisible: false, 
       isRedCircleHovered: false,
-      switchValue: 'Background Summary' 
+      switchValue: 'Background Summary',
+      contactModalVisible: false,
+      selectedContactType: '',
+      email: '',
+      name: '',
+      additionalInfo: '',
     };
     this.closeModal = this.closeModal.bind(this); 
   }
@@ -70,11 +75,6 @@ class About extends Component {
     });
   };
 
-
-
-
-
-
   closeModal = () => {
     this.setState({ isModalVisible: false });
   }
@@ -83,9 +83,56 @@ class About extends Component {
     for (const [projectName, projectObj] of Object.entries(this.props.projectData)) {
         allKeys.push(...Object.keys(projectObj));
     }
-    // Get unique keys
     return [...new Set(allKeys)];
   }
+
+  showContactModal = (contactType) => {
+    this.setState({ 
+        contactModalVisible: true,
+        selectedContactType: contactType,
+    });
+  };
+
+  closeContactModal = () => {
+    this.setState({ contactModalVisible: false });
+  };
+
+  handleSend = async () => {
+    console.log('Sending data:', this.state);
+    if (!this.state.email || !this.state.name) {
+      alert('Please fill in all required fields.');
+      return;
+    }
+  
+    const data = {
+      email: this.state.email,
+      name: this.state.name,
+      additionalInfo: this.state.additionalInfo,
+      contactReason: this.state.selectedContactType,
+    };
+  
+    try {
+      const response = await fetch('http://localhost:5001/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+      const result = await response.json();
+  
+      if (result.success) {
+        alert('Email sent successfully.');
+        this.closeContactModal();
+        this.setState({ email: '', name: '', additionalInfo: '' }); // Reset form fields
+      } else {
+        alert('Error sending email.');
+      }
+    } catch (error) {
+      alert('Failed to send the email due to a network error.');
+    }
+  }
+  
 
   render() {
     if (this.props.sharedBasicInfo) {
@@ -95,7 +142,6 @@ class About extends Component {
       var sectionName = this.props.resumeBasicInfo.section_name.about;
       var hello = this.props.resumeBasicInfo.description_header;
       var about = this.props.resumeBasicInfo.description;
-      var contact_me =  this.props.resumeBasicInfo.contact_me;
       var summary = this.props.resumeBasicInfo.highlights;
     }
     
@@ -115,9 +161,6 @@ class About extends Component {
         </ul>
       );
     }
-    
-    const isModalVisible = this.state.selectedProjects.length > 0;
-
 
     return (
       <section id="about">
@@ -189,14 +232,62 @@ class About extends Component {
                       onChange={(checked) => {
                           this.setState({ switchValue: checked ? 'Background Summary' : 'Highlights' });
                     }}
-/>
+                    />
                     <br />
                     <br />
                     {displayContent}
                     <br />
                     <br />
-                    <strong>Contact me: </strong><strong>{ contact_me }</strong>
+                      <div style={{ display: 'flex', flexDirection: 'row', gap: '20px' }}>
+                        <button className="transparent-button" onClick={() => this.showContactModal('I am hiring')}>I am hiring</button>
+                        <button className="transparent-button" onClick={() => this.showContactModal('Hiring a freelancer')}>Hiring a freelancer</button>
+                        <button className="transparent-button" onClick={() => this.showContactModal('Building with you')}>Building with you</button>
+                        <button className="transparent-button" onClick={() => this.showContactModal('This is a referral')}>This is a referral</button>
+                      </div>
                   </div>
+                  <Modal
+                    title="Contact Form"
+                    visible={this.state.contactModalVisible}
+                    onCancel={this.closeContactModal}
+                    footer={
+                      <div style={{ textAlign: 'center'}}>
+                        <button className="transparent-button-center" onClick={this.handleSend}>Send</button>
+                      </div>
+                    }
+                  >
+                  <div className="contact-modal-container">
+                    <div className="contact-modal-field">
+                        <label>Email:</label>
+                        <input 
+                            type="email" 
+                            placeholder="Enter your email" 
+                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                            value={this.state.email}
+                            onChange={(e) => this.setState({ email: e.target.value })}                          
+                            required
+                        />
+                    </div>
+                    <div className="contact-modal-field">
+                        <label>Name:</label>
+                        <input 
+                            type="text" 
+                            placeholder="Enter your name"
+                            value={this.state.name}
+                            onChange={(e) => this.setState({ name: e.target.value })}                           
+                            minLength="3"
+                            required
+                        />
+                    </div>
+                    <div className="contact-modal-field">
+                        <label>Any additional info:</label>
+                        <textarea placeholder="Any additional info..."
+                          value={this.state.additionalInfo}
+                          onChange={(e) => this.setState({ additionalInfo: e.target.value })}                        
+                        ></textarea>
+                    </div>
+                    <p>Your email will be pre-populated based on your selection. I will reach out to you as soon as I can.</p>
+                    </div>
+                  </Modal>
                 </div>
               </div>
             </div>
