@@ -61,7 +61,6 @@ class About extends Component {
       }
     }
   
-    // Check if selectedProjects is not empty before showing modal
     if (selectedProjects.length > 0) {
       this.setState({ selectedProjects, isModalVisible: true });
     } else {
