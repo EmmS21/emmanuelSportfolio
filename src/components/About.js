@@ -47,27 +47,25 @@ class About extends Component {
     }
   };
   handleDropdownChange = selectedKeys => {
-    const selectedProjects = [];
-    
-    for (const [projectName, projectObj] of Object.entries(this.props.projectData)) {
-      for (const key of selectedKeys) {
-        if (projectObj.hasOwnProperty(key)) {
-          selectedProjects.push({
-            key: key,
-            value: projectObj[key],
-            projectName: projectName
-          });
-        }
-      }
-    }
-  
-    if (selectedProjects.length > 0) {
-      this.setState({ selectedProjects, isModalVisible: true });
-    } else {
-      this.setState({ selectedProjects, isModalVisible: false });
-    }
-  }
-  
+    const selectedProjects = selectedKeys.flatMap(key => 
+        Object.entries(this.props.projectData)
+            .filter(([projectName, projectObj]) => projectObj.hasOwnProperty(key))
+            .map(([projectName, projectObj]) => ({
+                key: key,
+                value: projectObj[key],
+                projectName: projectName
+            }))
+    );
+
+    this.setState({ 
+        selectedProjects, 
+        isModalVisible: selectedProjects.length > 0,
+        displayedProjects: selectedProjects.length > 0 ? selectedProjects : this.state.displayedProjects 
+    }, () => {
+        console.log("Updated selectedProjects:", this.state.selectedProjects);
+    });
+};
+
 
 
   closeModal = () => {
@@ -93,6 +91,8 @@ class About extends Component {
       var about = this.props.resumeBasicInfo.description;
       var contact_me =  this.props.resumeBasicInfo.contact_me;
     }
+    const isModalVisible = this.state.selectedProjects.length > 0;
+
 
     return (
       <section id="about">
@@ -186,6 +186,7 @@ class About extends Component {
             title="Proficiency based on project"
             visible={this.state.isModalVisible}
             onCancel={this.closeModal}
+            onOpen={() => this.setState({ displayedProjects: this.state.selectedProjects })}
             footer={null}
         >
             {this.state.selectedProjects.map(project => (
