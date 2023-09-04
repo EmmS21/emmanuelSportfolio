@@ -48,8 +48,11 @@ class Projects extends Component {
       projectsDisplay = this.props.resumeProjects
         .filter(project => {
           if (this.state.selectedTechnologies.length === 0) return true;
-          return project.technologies.some(tech => this.state.selectedTechnologies.includes(tech.name));
+            return this.state.selectedTechnologies.every(selectedTech => 
+          project.technologies.some(tech => tech.name === selectedTech)
+          );
         })
+    
         .map(function (projects) {
           return (
             <div
