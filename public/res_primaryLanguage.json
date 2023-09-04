@@ -1,7 +1,7 @@
 {
     "basic_info": {
       "description_header": "Hi",
-      "description": "My name is Emmanuel Sibanda, I am a Software Engineer with a prior career in Data Analytics, I interned at Google and co-founded an EdTech startup that raised close to $50 000, training and outsourcing Data Analytics talent in Africa. I realized that I spent most of my spare time building projects, this motivated my decision to transition to a Software Engineering career",
+      "description": "My name is Emmanuel Sibanda, I am a Software Engineer with a prior career in Data Analytics, I interned at Google and co-founded an EdTech startup that raised close to $50 000, training and outsourcing Data Analytics talent in Africa. I realized that I spent most of my spare time building projects, this motivated my decision to transition to a Software Engineering career. FYI: Hover over Experience Header to see Qualifications",
       "contact_me": "emmanuelsibandaus@gmail.com",
       "section_name": {
         "about": "About me",
@@ -307,6 +307,38 @@
         "technologies": [
           "SQL, Excel"
         ]
+      }
+    ],
+    "qualifications": [
+      {
+        "institution": "BloomTech",
+        "studied": "Full Stack Web Development",
+        "year": "2022",
+        "status": "Complete"
+      },
+      {
+        "institution": "Springboard",
+        "studied": "Data Science Career Track (Bootcamp)",
+        "year": "2020",
+        "status": "Complete"
+      },
+      {
+        "institution": "Brightest Young Minds",
+        "studied": "Selected as one of the 100 Brightest Young Minds in Africa by the BYM institution in collaboration with ABSA bank",
+        "year": "2017",
+        "status": "Complete"
+      },
+      {
+        "institution": "University of Kwazulu Natal, South Africa",
+        "studied": "Masters of Law : LLM",
+        "year": "2015",
+        "status": "Incomplete"
+      },
+      {
+        "institution": "University of Kwazulu Natal, South Africa",
+        "studied": "Bachelors of Law : LLB",
+        "year": "2014",
+        "status": "Complete"
       }
     ]
   }

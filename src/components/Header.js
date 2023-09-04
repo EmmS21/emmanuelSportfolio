@@ -28,6 +28,7 @@ class Header extends Component {
       var name = this.props.sharedData.name;
       var education = this.props.sharedData.education
       this.titles = this.props.sharedData.titles.map(x => [ x.toUpperCase(), 1500 ] ).flat();
+      var location = this.props.sharedData.location
     }
 
     const HeaderTitleTypeAnimation = React.memo( () => {
@@ -47,6 +48,9 @@ class Header extends Component {
               <h2 className="mb-0">
                 <Typical steps={[education]} wrapper="p"/>
               </h2>
+              <h3>
+                <Typical steps={[location]} wrapper="p"/>
+              </h3>
               <div className="title-container">
                 <HeaderTitleTypeAnimation />
               </div>

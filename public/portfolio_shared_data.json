@@ -2,6 +2,7 @@
     "basic_info": {
       "name": "Emmanuel Sibanda",
       "titles": [ "Backend Developer", "Full Stack Engineer", "Data Engineer", "Front-End Developer" ],
+      "location": "Austin, Texas",
       "social": [
         {
           "name": "github",

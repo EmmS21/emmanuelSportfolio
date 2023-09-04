@@ -8,6 +8,7 @@ class About extends Component {
     this.state = {
       selectedProjects: [], 
       isModalVisible: false, 
+      isRedCircleHovered: false
     };
     this.closeModal = this.closeModal.bind(this); 
   }

@@ -137,6 +137,7 @@ class App extends Component {
         <Experience
           resumeExperience={this.state.resumeData.experience}
           resumeBasicInfo={this.state.resumeData.basic_info}
+          resumeQualifications={this.state.resumeData.qualifications}
         />
         <Footer sharedBasicInfo={this.state.sharedData.basic_info} />
       </div>

@@ -53,18 +53,18 @@ class Projects extends Component {
         .map(function (projects) {
           return (
             <div
-              className="col-sm-12 col-md-6 col-lg-4"
+              className="col-sm-12 col-md-6 col-lg-4 project-box"
               key={projects.title}
               style={{ cursor: "pointer" }}
             >
               <span className="portfolio-item d-block">
                 <div className="foto" onClick={() => detailsModalShow(projects)}>
-                  <div>
+                  <div className="project-image-container">
                     <img
                       src={projects.images[0]}
                       alt="projectImages"
-                      height="230"
-                      style={{ marginBottom: 0, paddingBottom: 0, position: 'relative' }}
+                      height="auto"
+                      style={{ marginBottom: 0, paddingBottom: 0, position: 'relative', objectFit: 'cover', flex: '1 1 auto' }}
                     />
                     <span className="project-date">{projects.startDate}</span>
                     <br />
