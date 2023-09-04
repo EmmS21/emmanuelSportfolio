@@ -38,7 +38,7 @@ class About extends Component {
   runSeleniumScript = async () => {
     this.countDown();
     try {
-      const response = await fetch('https://emmanuelsibanda.vercel.app/api/runSelenium');
+      const response = await fetch('http://localhost:5001/api/runSelenium');
       const data = await response.text();
       if (response.ok) {
         console.log('Selenium script executed successfully:', data);
@@ -179,13 +179,13 @@ class About extends Component {
                     alt="Avatar placeholder"
                   />
                 </span>
-                <button
+                {/* <button
               className="e2e-test-btn"
               onClick={this.runSeleniumScript}
               title="This will run an end-to-end test simulating a user's journey"
             >
               Visual End to End Testing
-            </button>
+            </button> */}
             </div>
 
 
