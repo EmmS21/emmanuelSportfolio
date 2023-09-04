@@ -238,12 +238,12 @@ class About extends Component {
                     {displayContent}
                     <br />
                     <br />
-                      <div style={{ display: 'flex', flexDirection: 'row', gap: '20px' }}>
+                      {/* <div style={{ display: 'flex', flexDirection: 'row', gap: '20px' }}>
                         <button className="transparent-button" onClick={() => this.showContactModal('I am hiring')}>I am hiring</button>
                         <button className="transparent-button" onClick={() => this.showContactModal('Hiring a freelancer')}>Hiring a freelancer</button>
                         <button className="transparent-button" onClick={() => this.showContactModal('Building with you')}>Building with you</button>
                         <button className="transparent-button" onClick={() => this.showContactModal('This is a referral')}>This is a referral</button>
-                      </div>
+                      </div> */}
                   </div>
                   <Modal
                     title="Contact Form"
