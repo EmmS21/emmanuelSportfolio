@@ -38,7 +38,7 @@ class About extends Component {
   runSeleniumScript = async () => {
     this.countDown();
     try {
-      const response = await fetch('http://localhost:5001/api/runSelenium');
+      const response = await fetch('https://emmanuelsibanda.vercel.app/api/runSelenium');
       const data = await response.text();
       if (response.ok) {
         console.log('Selenium script executed successfully:', data);
@@ -112,7 +112,7 @@ class About extends Component {
     };
   
     try {
-      const response = await fetch('http://localhost:5001/send-email', {
+      const response = await fetch('https://emmanuelsibanda.vercel.app/send-email', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

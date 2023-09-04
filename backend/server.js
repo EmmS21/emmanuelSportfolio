@@ -1,7 +1,10 @@
+require('dotenv').config(); 
 const express = require('express');
 const cors = require('cors');
+
 const openLink = require('../src/tests/automation/runJobAssistant'); 
 const sgMail = require('@sendgrid/mail');
+
 
 const app = express();
 const PORT = 5001;
@@ -9,7 +12,10 @@ const PORT = 5001;
 app.use(cors());
 app.use(express.json()); 
 
+
+console.log('new****',process.env.SENDGRID_API_KEY)
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+
 
 app.get('/api/runSelenium', async (req, res) => {
     try {
