@@ -3,10 +3,10 @@
         "Develop and maintain web applications using modern frameworks": "Developed a structured application using Next.js, with a clear UI built from imported components.",
         "Integrate Third-Party Libraries and APIs": "Successfully integrated the OpenAI API, dynamically constructing prompts and handling API responses.",
         "Manage and optimize caching (eg. Redis) solutions for rapid data access and scalability": "Utilized Redis for rate limiting, ensuring quick and efficient data access.",
-        "Design and implement interactive UI components to enhance user engagement": "Developed various interactive UI components, including games and visual feedback mechanisms.",
-        "Implement robust error handling mechanisms to provide clear feedback to users": "Developed custom error classes, providing specific feedback for various error scenarios.",
+        "Design and Implement Responsive UI Components": "Developed various interactive UI components, including games and visual feedback mechanisms.",
+        "Implement client side validation and error handling": "Developed custom error classes, providing specific feedback for various error scenarios.",
         "Design and implement responsive and visually appealing styles for web applications": "Utilized CSS for comprehensive styling, including animations, transitions, and mobile responsiveness.",
-        "Develop and maintain automated test scripts to ensure application robustness and consistency": "Used Selenium WebDriver for comprehensive web application testing, simulating real-world user interactions and validating test outcomes.",
+        "Automated Testing and Unit Testing": "Used Selenium WebDriver for comprehensive web application testing, simulating real-world user interactions and validating test outcomes.",
         "AWS Lambda Functions": "Leveraged AWS Lambda to run serverless function (OpenAI request) in order to bypass Vercel timelimit on serverless functions"
     },
     "Pair Progamming": {
@@ -25,7 +25,6 @@
         "Develop and maintain web applications using modern frameworks": "Developed a web-based code editor application using React, integrating features like code submission, real-time feedback, and user interactivity.",
         "Integrate Third-Party Libraries and APIs": "Integrated the AceEditor for code editing, Judge0 API for code execution, Axios for HTTP requests, and MUI for UI components.",
         "Design and implement state management solutions (ie. useContext, Redux)": "Utilized React's Context API to manage global state across components, ensuring data consistency and reactivity.",
-        "Design and Implement Interactive UI Components": "Developed interactive components like modals, countdown timers, navigation bars, and drawers to enhance user experience.",
         "Implement client side validation and error handling": "Implemented error handling during code execution and provided real-time feedback to users based on code output.",
         "Automated Testing and Unit Testing": "Used \"@testing-library/react\" and Jest to write unit tests, ensuring functionality and user interactions are correctly handled.",
         "Optimize Application Performance and User Experience": "Implemented loading spinners using RingLoader to provide feedback during asynchronous operations.",
@@ -33,7 +32,7 @@
         "Integrate and Manage Databases": "Interacted with MongoDB through API endpoints to fetch coding challenges and other relevant data.",
         "Ensure Secure API Interactions": "Managed API keys securely and integrated CORS middleware to handle cross-origin requests.",
         "Implement Real-time Functionalities": "Utilized countdown timers to provide real-time feedback on time left for coding challenges.",
-        "Design and Implement Responsive UI Components": "Developed responsive modals and editor components that adapt to different screen sizes and user interactions."
+        "Design and Implement Responsive UI Components": "Developed responsive modals, count down timers, navigation bars, drawers and code editor components that adapt to different screen sizes and user interactions."
     },
     "Boxing Prediction": {
         "Data Cleaning and Transformation": "Utilized pandas for data cleaning, transformation, and integration from multiple CSV sources. (Practical Proficiency: Concatenating CSV files, handling missing values, data type conversions, merging datasets)",
@@ -45,7 +44,7 @@
         "Machine Learning": "Proficiency in implementing, optimizing through hyperparameter tuning, feature importance and generating new features by combining existing features and testing accuracy or multiple Machine Learning models including CatBoost and XGBoost, using a Confusion Matrix"
       },
       "PEMDAS Calculator": {
-        "Implementing reusable UI components Development and Integration":  "Demonstrated proficiency by implementing and integrating UI components including Buttons and Frames, enhancing the overall user experience.",
+        "Design and Implement Responsive UI Components":  "Demonstrated proficiency by implementing and integrating UI components including Buttons and Frames, enhancing the overall user experience.",
         "User Interface Design and Styling": "Implementing a visually appealing and consistent look and feel throughout the application using CSS",
         "Automated Testing and Unit Testing": "Implementing unit testing ensuring test coverage of 85%",
         "Dynamic Content Display and Interaction":  "Implementing dynamic text content with automatic font sizing to enhance user experience"
@@ -55,5 +54,11 @@
         "Data Modeling": "Skillful creation and management of data models, schemas, and structures to ensure efficient data storage and analysis.",
         "Database Management": "Evaluated project requirements and selected suitable database technology  based on data structure, scalability, and performance considerations. Leveraged SQL to acquire and clean data from multiple tables",
         "Machine Learning": "Leveraged Markov Chain to return analysis of marketing campaign likely efficacy based on parameters such as; what day and ad is released and through what marketing channels"
+      },
+      "Software Engineer Intern @ Vial": {
+        "Design and Implement Responsive UI Components": "Implemented modals and re-designed tables rendering clinial trial data in according with sketches drafted by design team",
+        "Dynamic Content Display and Interaction": "Implemented global search and filter functionality on tables rendering clinical trial data, enhancing user experience",
+        "Automated Testing and Unit Testing": "Implemented unit testing maintained test coverage of 75% on my branches",
+        "Implement monitoring and logging": "Integrated PinoJS to implement client side logging enhancing debugging and bug detection"
       }          
 }
