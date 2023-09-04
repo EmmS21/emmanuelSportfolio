@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Modal, Select } from 'antd';
+import { Modal, Select, Switch } from 'antd';
 
 const { Option } = Select;
 class About extends Component {
@@ -8,7 +8,8 @@ class About extends Component {
     this.state = {
       selectedProjects: [], 
       isModalVisible: false, 
-      isRedCircleHovered: false
+      isRedCircleHovered: false,
+      switchValue: 'Background Summary' 
     };
     this.closeModal = this.closeModal.bind(this); 
   }
@@ -84,8 +85,7 @@ class About extends Component {
     }
     // Get unique keys
     return [...new Set(allKeys)];
-}
-
+  }
 
   render() {
     if (this.props.sharedBasicInfo) {
@@ -96,7 +96,26 @@ class About extends Component {
       var hello = this.props.resumeBasicInfo.description_header;
       var about = this.props.resumeBasicInfo.description;
       var contact_me =  this.props.resumeBasicInfo.contact_me;
+      var summary = this.props.resumeBasicInfo.highlights;
     }
+    
+    let displayContent;
+    if (this.state.switchValue === 'Background Summary') {
+      displayContent = about;
+    } 
+    else {
+      displayContent = (
+        <ul>
+            {summary.map((item, index) => (
+              <li key={index} style={{ listStyleType: 'none', position: 'relative' }}>
+                    <span className="rotatingBullet"></span>
+                    {item}
+                </li>
+            ))}
+        </ul>
+      );
+    }
+    
     const isModalVisible = this.state.selectedProjects.length > 0;
 
 
@@ -162,9 +181,18 @@ class About extends Component {
                   >
                     <br />
                     <span className="wave">{hello} :) </span>
+                    <Switch
+                      className="float-right" 
+                      checkedChildren="Background Summary"
+                      unCheckedChildren="Highlights"
+                      defaultChecked
+                      onChange={(checked) => {
+                          this.setState({ switchValue: checked ? 'Background Summary' : 'Highlights' });
+                    }}
+/>
                     <br />
                     <br />
-                    {about}
+                    {displayContent}
                     <br />
                     <br />
                     <strong>Contact me: </strong><strong>{ contact_me }</strong>

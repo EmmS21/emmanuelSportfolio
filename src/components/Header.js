@@ -36,7 +36,7 @@ class Header extends Component {
     });
 
     return (
-    <header id="home" style={{ height: (window.innerHeight - 140) * 0.5, display: 'block' }}>
+    <header id="home" style={{ height: (window.innerHeight - 110) * 0.25, display: 'block' }}>
         <div className="row aligner" style={{height: '100%'}}>
           <div className="col-md-12">
             <div>

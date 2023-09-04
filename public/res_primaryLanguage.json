@@ -2,6 +2,14 @@
     "basic_info": {
       "description_header": "Hi",
       "description": "My name is Emmanuel Sibanda, I am a Software Engineer with a prior career in Data Analytics, I interned at Google and co-founded an EdTech startup that raised close to $50 000, training and outsourcing Data Analytics talent in Africa. I realized that I spent most of my spare time building projects, this motivated my decision to transition to a Software Engineering career. FYI: Hover over Experience Header to see Qualifications",
+      "highlights": [
+        "Founded an EdTech training Data Analytics talent in Africa raising $50 000",
+        "Worked as a Data Analyst",
+        "Interned at Google as an Analyst",
+        "Law degree graduate",
+        "Completed two bootcamps; Software Engineering & Data Science",
+        "Interned as a Software Engineer for a remote company in San Francisco"
+      ],
       "contact_me": "emmanuelsibandaus@gmail.com",
       "section_name": {
         "about": "About me",

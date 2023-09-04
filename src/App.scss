@@ -533,6 +533,19 @@ footer a:focus {
 	border-radius: 34px;
 	transition: 0.4s;
   }
+
+  .rotatingBullet {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin-right: 10px;
+    border-radius: 50%;
+    background: linear-gradient(270deg, black, #efe1bd);
+    background-size: 200% 200%;
+    animation: rotatingBulletGradient 5s infinite, rotation 5s infinite;
+}
+
+
   
   .slider:before {
 	position: absolute;
@@ -613,4 +626,22 @@ footer a:focus {
 	}
   }
   
+  @keyframes rotatingBulletGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
   
