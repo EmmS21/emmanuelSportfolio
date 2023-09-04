@@ -1,6 +1,6 @@
 const express = require('express');
 const cors = require('cors');
-const openLink = require('./src/tests/automation/runJobAssistant'); // Adjust the path to where your Selenium script is located
+const openLink = require('../src/tests/automation/runJobAssistant'); // Adjust the path to where your Selenium script is located
 
 const app = express();
 const PORT = 5001;
