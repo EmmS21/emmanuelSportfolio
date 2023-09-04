@@ -47,24 +47,30 @@ class About extends Component {
     }
   };
   handleDropdownChange = selectedKeys => {
-    const selectedProjects = selectedKeys.flatMap(key => 
-        Object.entries(this.props.projectData)
-            .filter(([projectName, projectObj]) => projectObj.hasOwnProperty(key))
-            .map(([projectName, projectObj]) => ({
-                key: key,
-                value: projectObj[key],
-                projectName: projectName
-            }))
-    );
-
+    const selectedProjects = [];
+    selectedKeys.forEach(selectedKey => {
+        const addedProjects = new Set(); 
+        for (let [projectName, skills] of Object.entries(this.props.projectData)) {
+            if (skills.hasOwnProperty(selectedKey) && !addedProjects.has(projectName)) {
+                selectedProjects.push({
+                    key: selectedKey,
+                    value: skills[selectedKey],
+                    projectName: projectName
+                });
+                addedProjects.add(projectName);  
+            }
+        }
+    });
     this.setState({ 
         selectedProjects, 
-        isModalVisible: selectedProjects.length > 0,
-        displayedProjects: selectedProjects.length > 0 ? selectedProjects : this.state.displayedProjects 
+        isModalVisible: selectedProjects.length > 0 
     }, () => {
         console.log("Updated selectedProjects:", this.state.selectedProjects);
     });
-};
+  };
+
+
+
 
 
 
