@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Modal, Select, Switch, Button, Tooltip } from 'antd';
+import { Modal, Select, Switch } from 'antd';
 
 const { Option } = Select;
 class About extends Component {
