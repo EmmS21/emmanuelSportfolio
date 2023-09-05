@@ -4,57 +4,73 @@ import { Modal } from "react-bootstrap";
 import AwesomeSlider from "react-awesome-slider";
 import AwesomeSliderStyles from "../scss/light-slider.scss";
 import AwesomeSliderStyles2 from "../scss/dark-slider.scss";
+import ErrorBoundary from "./ErrorBoundary";
+
+const Calculator = React.lazy(() => import("calculator/Calculator"));
+
 class ProjectDetailsModal extends Component {
+  state = {
+    isPEMDASLoaded: false,
+  };
+  async componentDidMount() {
+    const isPEMDAS = this.props.data && this.props.data.title === 'PEMDAS Calculator';
+    if(isPEMDAS){
+      await import("https://pemdas-if107354y-emms21.vercel.app/remoteEntry.js");
+      this.setState({ isPEMDASLoaded: true })
+    }
+  }
+
   hasVideoLinks() {
     const { one, two, three, four, five, six, seven } = this.props.data;
     return one || two || three || four || five || six || seven;
   }
-
-
+  
+  
+  
   render() {
-    if (this.props.data) {
-      const technologies = this.props.data.technologies;
-      const images = this.props.data.images;
-      var title = this.props.data.title;
-      var description = this.props.data.description;
-      var one = this.props.data.one;
-      var oneDescr = this.props.data.one_description;
-      var two = this.props.data.two;
-      var twoDescr = this.props.data.two_description;
-      var three = this.props.data.three;
-      var threeDescr = this.props.data.three_description;
-      var four = this.props.data.four;
-      var fourDescr = this.props.data.four_description;
-      var five = this.props.data.five;
-      var fiveDescr = this.props.data.five_description;
-      var six = this.props.data.six;
-      var sixDescr = this.props.data.six_description;
-      var seven = this.props.data.seven;
-      var sevenDescr = this.props.data.seven_description;
-      var url = this.props.data.url;
-      if (this.props.data.technologies) {
-        var tech = technologies.map((icons, i) => {
-          return (
-            <li className="list-inline-item mx-3" key={i}>
-              <span>
-                <div className="text-center">
-                  <i className={icons.class} style={{ fontSize: "300%" }}>
-                    <p className="text-center" style={{ fontSize: "30%" }}>
-                      {icons.name}
-                    </p>
-                  </i>
-                </div>
-              </span>
-            </li>
-          );
-        });
-        if (this.props.data.images) {
-          var img = images.map((elem, i) => {
-            return <div key={i} data-src={elem} />;
-          });
-        }
-      }
+    const { data } = this.props
+    if (!data) {
+      return null
     }
+    const {
+      technologies = [],
+      images = [],
+      title,
+      description,
+      one,
+      oneDescr,
+      two,
+      twoDescr,
+      three,
+      threeDescr,
+      four,
+      fourDescr,
+      five,
+      fiveDescr,
+      six,
+      sixDescr,
+      seven,
+      sevenDescr,
+      url,
+    } = data;
+
+    const isPEMDAS = title === "PEMDAS Calculator";
+    
+    const tech = technologies.map((icons, i) => (
+      <li className="list-inline-item mx-3" key={i}>
+          <span>
+            <div className="text-center">
+              <i className={icons.class} style={{ fontSize: "300%" }}>
+                <p className="text-center" style={{ fontSize: "30%" }}>
+                  {icons.name}
+                </p>
+              </i>
+            </div>
+          </span>
+      </li>
+    ));
+    const img = images.map((elem, i) => <div key={i} data-src={elem} />);
+
     return (
       <Modal
         {...this.props}
@@ -93,6 +109,17 @@ class ProjectDetailsModal extends Component {
               animation="scaleOutAnimation"
               className="slider-image"
             >
+              {isPEMDAS && this.state.isPEMDASLoaded ? (
+                <div data-src={images[0]}>
+                  <ErrorBoundary>
+                    <React.Suspense fallback="Loading Calculator...">
+                      <Calculator />
+                    </React.Suspense>
+                  </ErrorBoundary>
+                </div>
+                ) : (
+                  img
+              )}            
               {img}
             </AwesomeSlider>
           </div>

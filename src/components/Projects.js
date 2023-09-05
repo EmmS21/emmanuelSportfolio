@@ -29,9 +29,6 @@ class Projects extends Component {
   };
 
   render() {
-    console.log("Projects props:", this.props);
-    console.log("Unique technologies:", this.extractUniqueTechnologies());
-
     let detailsModalShow = (data) => {
       this.setState({ detailsModalShow: true, deps: data });
     };
