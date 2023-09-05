@@ -1,31 +1,16 @@
-const ModuleFederationPlugin = require("webpack").container.ModuleFederationPlugin;
+const webpack = require("webpack");
 
 module.exports = {
   webpack: {
     configure: (webpackConfig, { env, paths }) => {
+
+      webpackConfig.target = 'web';
       webpackConfig.plugins.push(
-        new ModuleFederationPlugin({
+        new webpack.container.ModuleFederationPlugin({
           name: "portfolio",
           remotes: {
             calculator: "calculator@https://pemdas-if107354y-emms21.vercel.app/remoteEntry.js",
           },
-          shared: {
-            react: { 
-              singleton: true,
-              eager: true,
-              requiredVersion: '^18.2.0'
-            },
-            "react-dom": { 
-              singleton: true,
-              eager: true,
-              requiredVersion: '^18.2.0'
-            },
-            "antd": {
-              singleton: true,
-              eager: true,
-              requiredVersion: '^5.8.6'
-            }
-          },          
         })
       );
 

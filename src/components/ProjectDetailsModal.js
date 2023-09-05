@@ -12,11 +12,26 @@ class ProjectDetailsModal extends Component {
   state = {
     isPEMDASLoaded: false,
   };
-  async componentDidMount() {
+  componentDidMount() {
     const isPEMDAS = this.props.data && this.props.data.title === 'PEMDAS Calculator';
     if(isPEMDAS){
-      await import("https://pemdas-if107354y-emms21.vercel.app/remoteEntry.js");
-      this.setState({ isPEMDASLoaded: true })
+        const script = document.createElement("script");
+        script.src = "https://pemdas-if107354y-emms21.vercel.app/remoteEntry.js";
+        script.async = true;
+        document.body.appendChild(script);
+        script.onload = () => {
+            this.setState({ isPEMDASLoaded: true });
+        };
+    }
+  }
+  componentWillUnmount() {
+    const isPEMDAS = this.props.data && this.props.data.title === 'PEMDAS Calculator';
+    if(isPEMDAS){
+        const scriptElements = Array.from(document.getElementsByTagName('script'));
+        const targetScript = scriptElements.find(script => script.src === "https://pemdas-if107354y-emms21.vercel.app/remoteEntry.js");
+        if(targetScript) {
+            document.body.removeChild(targetScript);
+        }
     }
   }
 
@@ -110,17 +125,17 @@ class ProjectDetailsModal extends Component {
               className="slider-image"
             >
               {isPEMDAS && this.state.isPEMDASLoaded ? (
-                <div data-src={images[0]}>
-                  <ErrorBoundary>
-                    <React.Suspense fallback="Loading Calculator...">
-                      <Calculator />
-                    </React.Suspense>
-                  </ErrorBoundary>
-                </div>
+                <>
+                  <div data-src={images[0]}/>
+                    <ErrorBoundary>
+                      <React.Suspense fallback="Loading Calculator...">
+                        <Calculator />
+                      </React.Suspense>
+                    </ErrorBoundary>
+                </>
                 ) : (
                   img
               )}            
-              {img}
             </AwesomeSlider>
           </div>
           <div className="col-md-10 mx-auto">
