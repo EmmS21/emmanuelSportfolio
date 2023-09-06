@@ -662,6 +662,67 @@ footer a:focus {
     color: inherit; 
 }
 
+.slider-icon {
+	font-size: 2em; /* Make the icons 1.5 times bigger */
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	cursor: pointer;
+	transition: opacity 0.3s, font-size 0.3s; /* Add transition for hover effect */
+  }
+  
+  .slider-icon:hover {
+	font-size: 3em; /* Increase font size on hover (20% bigger) */
+  }
+  
+  .prev-icon {
+	left: 0;
+  }
+  
+  .next-icon {
+	right: 0;
+  }
+  
+/* ProjectDetailsModal.css */
+.custom-slider {
+	position: relative;
+	width: 100%;
+	height: 600px; /* Adjust the height as needed */
+	overflow: hidden;
+  }
+  
+  .slider-container {
+	position: relative;
+	width: 100%;
+	height: 100%;
+  }
+  
+  .slider-image {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: none;
+  }
+  
+  .slider-image.active {
+	display: block;
+  }
+  
+  .slider-image img {
+	max-width: 100%;
+	max-height: 100%;
+	object-fit: contain;
+  }
+  
+  .slider-icon {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	font-size: 24px; /* Adjust the icon size as needed */
+	color: rgba(0, 0, 0, 0.7); 
+  }
   
   
   @keyframes flashBackground {

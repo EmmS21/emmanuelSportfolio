@@ -229,12 +229,11 @@
       {
         "title": "PEMDAS Calculator",
         "startDate": "2023",
-        "description": "A simple PEMDAS calculator.",
+        "description": "A simple PEMDAS calculator. Press any keys to interact directly with this app",
         "images": [
           "https://i.postimg.cc/BbNkwVmm/Screen-Shot-2023-08-21-at-10-43-21-AM.png"
         ],
-        "url": "https://pemdas-emms21.vercel.app/",
-
+        "url": "https://pemdas.vercel.app/",
         "technologies": [
           {
             "class": "devicon-react-original",

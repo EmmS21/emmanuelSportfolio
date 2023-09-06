@@ -20,6 +20,11 @@ class App extends Component {
     };
   }
 
+  componentDidMount() {
+    // Add a log to track the loading of the PEMDAS module
+    console.log("PEMDAS module loading...");
+  }
+
   applyPickedLanguage(pickedLanguage, oppositeLangIconId) {
     this.swapCurrentlyActiveLanguage(oppositeLangIconId);
     document.documentElement.lang = pickedLanguage;

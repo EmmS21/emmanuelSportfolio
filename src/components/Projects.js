@@ -11,6 +11,7 @@ class Projects extends Component {
       deps: {},
       detailsModalShow: false,
       selectedTechnologies: [],
+      selectedProject: null,
     };
   }
 
@@ -28,23 +29,15 @@ class Projects extends Component {
     return [...technologiesSet];
   };
 
-  componentDidUpdate(prevProps, prevState) {
-    if (prevState.detailsModalShow !== this.state.detailsModalShow && this.state.detailsModalShow) {
-    }
-  }
- 
+  handleTechChange = (values) => {
+    this.setState({ selectedTechnologies: values });
+  };
+
+  handleProjectClick = (project) => {
+    this.setState({ detailsModalShow: true, deps: project });
+  };
 
   render() {
-    let detailsModalShow = (data) => {
-      this.setState({ detailsModalShow: true, deps: data });
-    };
-
-    let detailsModalClose = () => this.setState({ detailsModalShow: false });
-
-    const handleTechChange = (values) => {
-      this.setState({ selectedTechnologies: values });
-    };
-
     let projectsDisplay;
     if (this.props.resumeProjects && this.props.resumeBasicInfo) {
       var sectionName = this.props.resumeBasicInfo.section_name.projects;
@@ -56,21 +49,25 @@ class Projects extends Component {
           );
         })
     
-        .map(function (projects) {
+        .map((projects) => {
           return (
             <div
               className="col-sm-12 col-md-6 col-lg-4 project-box"
               key={projects.title}
-              style={{ cursor: "pointer" }}
+              style={{ cursor: "pointer", display: "flex", flexDirection: "column" }}
             >
               <span className="portfolio-item d-block">
-                <div className="foto" onClick={() => {
-                  detailsModalShow(projects)}}>
+                <div 
+                  className="foto" 
+                  onClick={() => {
+                  this.handleProjectClick(projects)
+                  }}
+                  >
                   <div className="project-image-container">
                     <img
                       src={projects.images[0]}
                       alt="projectImages"
-                      height="auto"
+                      height="100%"
                       style={{ marginBottom: 0, paddingBottom: 0, position: 'relative', objectFit: 'cover', flex: '1 1 auto' }}
                     />
                     <span className="project-date">{projects.startDate}</span>
@@ -99,7 +96,7 @@ class Projects extends Component {
               mode="multiple"
               style={{ width: '100%' }}
               placeholder="Filter by technologies"
-              onChange={handleTechChange}
+              onChange={this.handleTechChange}
             >
               {this.extractUniqueTechnologies().map(tech => (
                 <Option key={tech} value={tech}>
@@ -112,8 +109,14 @@ class Projects extends Component {
           </div>
           <ProjectDetailsModal
             show={this.state.detailsModalShow}
-            onHide={detailsModalClose}
+            onHide={() => [
+              this.setState({
+                detailsModalShow: false,
+                isPEMDASCalculatorSelected: false,
+              })
+            ]}
             data={this.state.deps}
+            isPEMDASCalculatorSelected={this.state.isPEMDASCalculatorSelected}
           />
         </div>
       </section>

@@ -4,80 +4,37 @@ import { Modal } from "react-bootstrap";
 import AwesomeSlider from "react-awesome-slider";
 import AwesomeSliderStyles from "../scss/light-slider.scss";
 import AwesomeSliderStyles2 from "../scss/dark-slider.scss";
-// import ErrorBoundary from "./ErrorBoundary";
-
-// const Calculator = React.lazy(() => import("calculator/Calculator"));
 
 class ProjectDetailsModal extends Component {
-  state = {
-    isPEMDASLoaded: false,
-    antd: null
+  constructor(props) {
+    super(props);
+    this.state = {
+      currentImageIndex: 0, 
+    };
+  }  
+
+  handleNextImage = () => {
+    const { images } = this.props.data;
+    const { currentImageIndex } = this.state;
+    if (currentImageIndex < images.length - 1) {
+      this.setState({ currentImageIndex: currentImageIndex + 1 });
+    }
   };
 
-  
-  // componentDidMount() {
-  //   if(this.isPEMDASProject()){
-  //     const scriptElements = Array.from(document.getElementsByTagName('script'));
-  //     const targetScript = scriptElements.find(script => script.src === "http://localhost:3001/remoteEntry.js");
-  //     if(targetScript) {
-  //       document.body.removeChild(targetScript);
-  //     }
-  //   }    
-  // }
-  
-  // isPEMDASProject() {
-  //   return this.props.data && this.props.data.title === 'PEMDAS Calculator';
-  // }
-
-  // You can move the PEMDAS script logic into its own method for clarity
-//   loadPEMDASScript() {
-//       const script = document.createElement("script");
-//       script.src = "http://localhost:3001/remoteEntry.js";
-//       script.async = true;
-//       document.body.appendChild(script);
-//       script.onload = () => {
-//           this.setState({ isPEMDASLoaded: true });
-  
-//           import("calculator/Calculator")
-//               .then((_CalculatorModule) => {
-  
-//               })
-//               .catch((error) => {
-//                   console.error("Failed to load PEMDAS calculator:", error)
-//               })
-//       };
-//   }
-
-//   componentDidUpdate(prevProps) {
-//     if (this.props.data !== prevProps.data && this.isPEMDASProject() && !this.state.isPEMDASLoaded) {
-//         this.loadPEMDASScript();
-//     }
-//  }
- 
- 
-
-  // componentWillUnmount() {
-  //   console.log("Component will unmount.");
-  //   const isPEMDAS = this.props.data && this.props.data.title === 'PEMDAS Calculator';
-  //   if(isPEMDAS){
-  //       const scriptElements = Array.from(document.getElementsByTagName('script'));
-  //       const targetScript = scriptElements.find(script => script.src === "http://localhost:3001/remoteEntry.js");
-  //       console.log("Target script found:", !!targetScript);
-  //       if(targetScript) {
-  //           document.body.removeChild(targetScript);
-  //       }
-  //   }
-  // }
+  handlePrevImage = () => {
+    const { currentImageIndex } = this.state;
+    if (currentImageIndex > 0) {
+      this.setState({ currentImageIndex: currentImageIndex - 1 });
+    }
+  }
 
   hasVideoLinks() {
     const { one, two, three, four, five, six, seven } = this.props.data;
     return one || two || three || four || five || six || seven;
   }
   
-  
-  
   render() {
-    const { data } = this.props
+    const { data } = this.props;
     if (!data) {
       return null
     }
@@ -103,8 +60,6 @@ class ProjectDetailsModal extends Component {
       url,
     } = data;
 
-    // const isPEMDAS = title === "PEMDAS Calculator";
-    
     const tech = technologies.map((icons, i) => (
       <li className="list-inline-item mx-3" key={i}>
           <span>
@@ -118,7 +73,36 @@ class ProjectDetailsModal extends Component {
           </span>
       </li>
     ));
-    const img = images.map((elem, i) => <div key={i} data-src={elem} />);
+    
+
+    let content;
+    if (url) {
+      content = (
+        <iframe
+          title={title}
+          src={url}
+          width="500px"
+          height="600px"
+          style={{ border: "none", overflow: "auto" }}
+        ></iframe>
+      );
+    } else if (images.length > 0) {
+      console.log('this is working')
+      const img = images.map((elem, i) => <div key={i} data-src={elem} />);
+      console.log('****',img)     
+      content = (
+        <AwesomeSlider
+          cssModule={[AwesomeSliderStyles, AwesomeSliderStyles2]}
+          animation="scaleOutAnimation"
+          className="slider-image"
+        >
+          {img}
+        </AwesomeSlider>
+      );
+    } else {
+      content = <p>No content available for this project.</p>;
+    }
+
 
     return (
       <Modal
@@ -153,25 +137,9 @@ class ProjectDetailsModal extends Component {
                 data-inline="false"
               ></span>
             </div>
-            <AwesomeSlider
-              cssModule={[AwesomeSliderStyles, AwesomeSliderStyles2]}
-              animation="scaleOutAnimation"
-              className="slider-image"
-            >
-              {/* {isPEMDAS && this.state.isPEMDASLoaded ? (
-                <>
-                  <div data-src={images[0]}/>
-                    <ErrorBoundary>
-                      <React.Suspense fallback="Loading Calculator...">
-                        <Calculator />
-                      </React.Suspense>
-                    </ErrorBoundary>
-                </>
-                ) : (
-                  img
-              )}             */}
-              {img}
-            </AwesomeSlider>
+            <div>
+              {content}
+            </div>
           </div>
           <div className="col-md-10 mx-auto">
             <h3 style={{ padding: "5px 5px 0 5px" }}>
