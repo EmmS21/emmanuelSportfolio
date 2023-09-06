@@ -9,7 +9,7 @@ module.exports = {
         new webpack.container.ModuleFederationPlugin({
           name: "portfolio",
           remotes: {
-            calculator: "calculatorhttps://pemdas.vercel.app/remoteEntry.js",
+            calculator: "calculator@https://pemdas.vercel.app/remoteEntry.js",
           },
         })
       );
