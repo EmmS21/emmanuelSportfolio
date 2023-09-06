@@ -28,6 +28,12 @@ class Projects extends Component {
     return [...technologiesSet];
   };
 
+  componentDidUpdate(prevProps, prevState) {
+    if (prevState.detailsModalShow !== this.state.detailsModalShow && this.state.detailsModalShow) {
+    }
+  }
+ 
+
   render() {
     let detailsModalShow = (data) => {
       this.setState({ detailsModalShow: true, deps: data });
@@ -58,7 +64,8 @@ class Projects extends Component {
               style={{ cursor: "pointer" }}
             >
               <span className="portfolio-item d-block">
-                <div className="foto" onClick={() => detailsModalShow(projects)}>
+                <div className="foto" onClick={() => {
+                  detailsModalShow(projects)}}>
                   <div className="project-image-container">
                     <img
                       src={projects.images[0]}

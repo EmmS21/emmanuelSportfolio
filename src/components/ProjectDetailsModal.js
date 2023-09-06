@@ -4,36 +4,70 @@ import { Modal } from "react-bootstrap";
 import AwesomeSlider from "react-awesome-slider";
 import AwesomeSliderStyles from "../scss/light-slider.scss";
 import AwesomeSliderStyles2 from "../scss/dark-slider.scss";
-import ErrorBoundary from "./ErrorBoundary";
+// import ErrorBoundary from "./ErrorBoundary";
 
-const Calculator = React.lazy(() => import("calculator/Calculator"));
+// const Calculator = React.lazy(() => import("calculator/Calculator"));
 
 class ProjectDetailsModal extends Component {
   state = {
     isPEMDASLoaded: false,
+    antd: null
   };
-  componentDidMount() {
-    const isPEMDAS = this.props.data && this.props.data.title === 'PEMDAS Calculator';
-    if(isPEMDAS){
-        const script = document.createElement("script");
-        script.src = "https://pemdas-if107354y-emms21.vercel.app/remoteEntry.js";
-        script.async = true;
-        document.body.appendChild(script);
-        script.onload = () => {
-            this.setState({ isPEMDASLoaded: true });
-        };
-    }
-  }
-  componentWillUnmount() {
-    const isPEMDAS = this.props.data && this.props.data.title === 'PEMDAS Calculator';
-    if(isPEMDAS){
-        const scriptElements = Array.from(document.getElementsByTagName('script'));
-        const targetScript = scriptElements.find(script => script.src === "https://pemdas-if107354y-emms21.vercel.app/remoteEntry.js");
-        if(targetScript) {
-            document.body.removeChild(targetScript);
-        }
-    }
-  }
+
+  
+  // componentDidMount() {
+  //   if(this.isPEMDASProject()){
+  //     const scriptElements = Array.from(document.getElementsByTagName('script'));
+  //     const targetScript = scriptElements.find(script => script.src === "http://localhost:3001/remoteEntry.js");
+  //     if(targetScript) {
+  //       document.body.removeChild(targetScript);
+  //     }
+  //   }    
+  // }
+  
+  // isPEMDASProject() {
+  //   return this.props.data && this.props.data.title === 'PEMDAS Calculator';
+  // }
+
+  // You can move the PEMDAS script logic into its own method for clarity
+//   loadPEMDASScript() {
+//       const script = document.createElement("script");
+//       script.src = "http://localhost:3001/remoteEntry.js";
+//       script.async = true;
+//       document.body.appendChild(script);
+//       script.onload = () => {
+//           this.setState({ isPEMDASLoaded: true });
+  
+//           import("calculator/Calculator")
+//               .then((_CalculatorModule) => {
+  
+//               })
+//               .catch((error) => {
+//                   console.error("Failed to load PEMDAS calculator:", error)
+//               })
+//       };
+//   }
+
+//   componentDidUpdate(prevProps) {
+//     if (this.props.data !== prevProps.data && this.isPEMDASProject() && !this.state.isPEMDASLoaded) {
+//         this.loadPEMDASScript();
+//     }
+//  }
+ 
+ 
+
+  // componentWillUnmount() {
+  //   console.log("Component will unmount.");
+  //   const isPEMDAS = this.props.data && this.props.data.title === 'PEMDAS Calculator';
+  //   if(isPEMDAS){
+  //       const scriptElements = Array.from(document.getElementsByTagName('script'));
+  //       const targetScript = scriptElements.find(script => script.src === "http://localhost:3001/remoteEntry.js");
+  //       console.log("Target script found:", !!targetScript);
+  //       if(targetScript) {
+  //           document.body.removeChild(targetScript);
+  //       }
+  //   }
+  // }
 
   hasVideoLinks() {
     const { one, two, three, four, five, six, seven } = this.props.data;
@@ -53,23 +87,23 @@ class ProjectDetailsModal extends Component {
       title,
       description,
       one,
-      oneDescr,
+      one_description,
       two,
-      twoDescr,
+      two_description,
       three,
-      threeDescr,
+      three_description,
       four,
-      fourDescr,
+      four_description,
       five,
-      fiveDescr,
+      five_description,
       six,
-      sixDescr,
+      six_description,
       seven,
-      sevenDescr,
+      seven_description,
       url,
     } = data;
 
-    const isPEMDAS = title === "PEMDAS Calculator";
+    // const isPEMDAS = title === "PEMDAS Calculator";
     
     const tech = technologies.map((icons, i) => (
       <li className="list-inline-item mx-3" key={i}>
@@ -124,7 +158,7 @@ class ProjectDetailsModal extends Component {
               animation="scaleOutAnimation"
               className="slider-image"
             >
-              {isPEMDAS && this.state.isPEMDASLoaded ? (
+              {/* {isPEMDAS && this.state.isPEMDASLoaded ? (
                 <>
                   <div data-src={images[0]}/>
                     <ErrorBoundary>
@@ -135,7 +169,8 @@ class ProjectDetailsModal extends Component {
                 </>
                 ) : (
                   img
-              )}            
+              )}             */}
+              {img}
             </AwesomeSlider>
           </div>
           <div className="col-md-10 mx-auto">
@@ -160,13 +195,13 @@ class ProjectDetailsModal extends Component {
               <>
             <p> Some Video Links: </p>
             <ul>
-              { one &&  <li><a href={one}> {oneDescr} </a></li> }
-              { two && <li><a href={two}> {twoDescr} </a></li> }
-              { three && <li><a href={three}> {threeDescr} </a></li> }
-              { four &&  <li><a href={four}> {fourDescr} </a></li> }
-              { five &&  <li><a href={five}> {fiveDescr} </a></li> }
-              { six && <li><a href={six}> {sixDescr} </a></li> }
-              { seven && <li><a href={seven}> {sevenDescr} </a></li> }
+              { one &&  <li><a href={one}> {one_description} </a></li> }
+              { two && <li><a href={two}> {two_description} </a></li> }
+              { three && <li><a href={three}> {three_description} </a></li> }
+              { four &&  <li><a href={four}> {four_description} </a></li> }
+              { five &&  <li><a href={five}> {five_description} </a></li> }
+              { six && <li><a href={six}> {six_description} </a></li> }
+              { seven && <li><a href={seven}> {seven_description} </a></li> }
             </ul>
               
               </>
