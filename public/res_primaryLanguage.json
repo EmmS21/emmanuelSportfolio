@@ -1,11 +1,11 @@
 {
     "basic_info": {
       "description_header": "Hi",
-      "description": "My name is Emmanuel Sibanda, I am a Software Engineer with a prior career in Data Analytics, I interned at Google and co-founded an EdTech startup that raised close to $100 000, training and outsourcing Data Analytics talent in Africa. I realized that I spent most of my spare time building projects, this motivated my decision to transition to a Software Engineering career. FYI: Hover over Experience Header to see Qualifications",
+      "description": "My name is Emmanuel Sibanda, I am a Software Engineer with a prior career in Data Analytics, I worked at Google and co-founded an EdTech startup that raised close to $50 000, training and outsourcing Data Analytics talent in Africa. I realized that I spent most of my spare time building projects, this motivated my decision to transition to a Software Engineering career. FYI: Hover over Experience Header to see Qualifications",
       "highlights": [
-        "Founded an EdTech training Data Analytics talent in Africa raising $100 000",
+        "Founded an EdTech training Data Analytics talent in Africa raising $50 000",
         "Worked as a Data Analyst",
-        "Interned at Google as an Analyst",
+        "Worked at Google as an Analyst",
         "Law degree graduate",
         "Completed two bootcamps; Software Engineering & Data Science",
         "Interned as a Software Engineer for a remote company in San Francisco"
@@ -191,7 +191,7 @@
           "https://i.postimg.cc/50JHKWM8/Screen-Shot-2023-08-21-at-9-28-37-AM.png"
         ],
         "url": "https://job-assistant.vercel.app/",
-        "one": "https://vimeo.com/861731982?share=copy",
+        "one": "https://vimeo.com/858367915?share=copy",
         "one_description": "Job Assistant Walkthrough",
 
         "technologies": [
@@ -285,7 +285,7 @@
         "years": "2019-2020",
         "description": "Built dashboards and used SQL to help evaluate the efficiency of marketing campaigns and aiding in fraud detection for over $55 million in monthly transactions",
         "mainTech": [
-          "SQL"
+          "SQL, Python"
         ],
         "technologies": [
           "SQL, Tableau, Python, Snowflake"
@@ -297,15 +297,15 @@
         "years": "2018-2019",
         "description": "Built dashboards collating data to help one of the big 5 Banks in South Africa  get insights to drive marketing efforts",
         "mainTech": [
-          "SQL, Excel"
+          "SQL, Excel, Python"
         ],
         "technologies": [
-          "SQL, Excel"
+          "SQL, Excel, Python"
         ]
       },
       {
         "company": "Google",
-        "title": "Intern Analyst, LCS Team",
+        "title": "Analyst - Contractor",
         "years": "2018",
         "description": "Carried out data analysis on emerging tech ecosystems in Africa supporting Google branches in Africa in restructuring their strategic goal to increase revenue from Video ads",
         "mainTech": [
@@ -313,6 +313,18 @@
         ],
         "technologies": [
           "SQL, Excel"
+        ]
+      },
+      {
+        "company": "Hooros",
+        "title": "Founder and Product Manager",
+        "years": "2015-2018",
+        "description": "Co-founded a freelance marketplace platform that connected vetted freelance software developers and copywriters to clients seeking their services and managing each project to ensure completion. Managed projects such as; an SEO optimization campaign, refactoring code for US recycling company to modernize their infrastruture, building a mailing and billing system for a Game Reserve, increasing customer engagement by over 50% and building MVPs using Low-Code tools for startups as part of a contract with a seed investor/incubator",
+        "mainTech": [
+          "Product Management, HTML, JavaScript, CSS"
+        ],
+        "technologies": [
+          "Product Management, HTML, JavaScript, CSS"
         ]
       }
     ],
