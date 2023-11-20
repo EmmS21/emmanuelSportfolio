@@ -55,7 +55,7 @@
         "Database Management": "Evaluated project requirements and selected suitable database technology  based on data structure, scalability, and performance considerations. Leveraged SQL to acquire and clean data from multiple tables",
         "Machine Learning": "Leveraged Markov Chain to return analysis of marketing campaign likely efficacy based on parameters such as; what day and ad is released and through what marketing channels"
       },
-      "Software Engineer Intern @ Vial": {
+      "Software Engineer @ Vial": {
         "Design and Implement Responsive UI Components": "Implemented modals and re-designed tables rendering clinial trial data in according with sketches drafted by design team",
         "Dynamic Content Display and Interaction": "Implemented global search and filter functionality on tables rendering clinical trial data, enhancing user experience",
         "Automated Testing and Unit Testing": "Implemented unit testing maintained test coverage of 75% on my branches",
