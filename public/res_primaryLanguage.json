@@ -292,21 +292,9 @@
         ]
       },
       {
-        "company": "Digitas Liquorice",
-        "title": "Data Analyst",
-        "years": "2018-2019",
-        "description": "Built dashboards collating data to help one of the big 5 Banks in South Africa  get insights to drive marketing efforts",
-        "mainTech": [
-          "SQL, Excel, Python"
-        ],
-        "technologies": [
-          "SQL, Excel, Python"
-        ]
-      },
-      {
         "company": "Google",
         "title": "Analyst - Contractor",
-        "years": "2018",
+        "years": "2018-2019",
         "description": "Carried out data analysis on emerging tech ecosystems in Africa supporting Google branches in Africa in restructuring their strategic goal to increase revenue from Video ads",
         "mainTech": [
           "SQL, Excel"
