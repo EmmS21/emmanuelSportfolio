@@ -52,7 +52,7 @@
         "six_description": "Synchronizing States between two clients enabling users to share code editor",
         "seven": "https://vimeo.com/770609143",
         "seven_description": "Retrieving programming challenge and synchronizing states, ensuring paired users see the same challenge",
-        "url": "https://peerprogrammingplatform.vercel.app/",
+        "url": "https://www.youtube.com/watch?v=kbIjydKqI2w&t=1s",
         "technologies": [
           {
             "class": "devicon-django-plain",
@@ -242,6 +242,25 @@
           {
             "class": "devicon-jest-plain",
             "name": "Jest"
+          },
+          {
+            "class": "devicon-javascript-plain",
+            "name": "Javascipt"
+          }
+        ]
+      },
+      {
+        "title": "Open Source: Building a CI/CD pipeline using Dagger",
+        "startDate": "2023",
+        "description": "Built a CI/CD pipeline using Dagger, an open source programmable CI/CD engine, automating running a linter and formatter, unit tests and Docker image creation. Delivered a presentation on the implementation at a Dagger-organized event, highlighting its efficiency in accelerating development cycles.",
+        "images": [
+          "https://ibb.co/RTXDDL0"
+        ],
+        "url": "https://www.youtube.com/watch?v=kbIjydKqI2w&t=1s",
+        "technologies": [
+          {
+            "class": "devicon-git-original",
+            "name": "Git"
           },
           {
             "class": "devicon-javascript-plain",
